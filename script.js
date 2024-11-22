@@ -11,12 +11,24 @@ function convertToRoman(num) {
 
 	let result = "";
   //your code here
-	 for (let [symbol, value] of obj) {
-        while (num >= value) {
-            result += symbol;
-            num -= value;
-        }
+	for (const [symbol, value] of romanSymbols) {
+    while (num >= value) { 
+      romanNumeral += symbol;
+      num -= value;
     }
+  }
+
+  return result; 
+}for (const [symbol, value] of romanSymbols) {
+    while (num >= value) { 
+      result += symbol;
+      num -= value; 
+    }
+  }
+
+  return result; 
+}
+	 
 
     return result;
 }
